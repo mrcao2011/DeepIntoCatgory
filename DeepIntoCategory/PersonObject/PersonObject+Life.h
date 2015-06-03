@@ -1,13 +1,16 @@
 //
-//  PersonObject+Life.m
+//  PersonObject+Life.h
 //  DeepIntoCategory
 //
 //  Created by ronglei on 15/4/30.
 //  Copyright (c) 2015年 ronglei. All rights reserved.
 //
 
-#import "PersonObject+Life.h"
+#import "PersonObject.h"
 
-@implementation PersonObject (Life)
+@interface PersonObject(Life)
+
+- (void)goToTheCinema;
+- (void)goShopping;
 
 @end

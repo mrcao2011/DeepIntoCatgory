@@ -10,4 +10,8 @@
 
 @interface NSString (Category)
 
+@property (nonatomic, strong) NSString *associateObj;
+
+- (NSString *)removeWhiteSpace;
+
 @end

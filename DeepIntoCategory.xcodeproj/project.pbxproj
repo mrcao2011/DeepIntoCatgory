@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5DDB13581AF076E60097A8E8 /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDB13571AF076E60097A8E8 /* NSString+Category.m */; };
+		5DEAE8361AF218F300D55CE1 /* PersonObject+Friendlist.h in Sources */ = {isa = PBXBuildFile; fileRef = 5DEAE8351AF218F300D55CE1 /* PersonObject+Friendlist.h */; };
+		5DEAE8381AF219AD00D55CE1 /* PersonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DEAE8371AF219AD00D55CE1 /* PersonObject.m */; };
+		5DEAE83B1AF219F400D55CE1 /* PersonObject+Work.h in Sources */ = {isa = PBXBuildFile; fileRef = 5DEAE83A1AF219F400D55CE1 /* PersonObject+Work.h */; };
+		5DEAE83E1AF21A2C00D55CE1 /* PersonObject+Life.h in Sources */ = {isa = PBXBuildFile; fileRef = 5DEAE83D1AF21A2C00D55CE1 /* PersonObject+Life.h */; };
 		5DFF12481AF07466008042CF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFF12471AF07466008042CF /* main.m */; };
 		5DFF124B1AF07466008042CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFF124A1AF07466008042CF /* AppDelegate.m */; };
 		5DFF124E1AF07466008042CF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFF124D1AF07466008042CF /* ViewController.m */; };
@@ -27,6 +32,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5DDB13561AF076E60097A8E8 /* NSString+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Category.h"; sourceTree = "<group>"; };
+		5DDB13571AF076E60097A8E8 /* NSString+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Category.m"; sourceTree = "<group>"; };
+		5DDB135B1AF07E6C0097A8E8 /* Associate object.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Associate object.md"; sourceTree = "<group>"; };
+		5DEAE8311AF216D800D55CE1 /* PersonObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonObject.h; sourceTree = "<group>"; };
+		5DEAE8351AF218F300D55CE1 /* PersonObject+Friendlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PersonObject+Friendlist.h"; sourceTree = "<group>"; };
+		5DEAE8371AF219AD00D55CE1 /* PersonObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonObject.m; sourceTree = "<group>"; };
+		5DEAE83A1AF219F400D55CE1 /* PersonObject+Work.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PersonObject+Work.h"; sourceTree = "<group>"; };
+		5DEAE83D1AF21A2C00D55CE1 /* PersonObject+Life.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PersonObject+Life.h"; sourceTree = "<group>"; };
 		5DFF12421AF07466008042CF /* DeepIntoCategory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeepIntoCategory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DFF12461AF07466008042CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DFF12471AF07466008042CF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -60,6 +73,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5DEAE8301AF216C900D55CE1 /* PersonObject */ = {
+			isa = PBXGroup;
+			children = (
+				5DEAE8311AF216D800D55CE1 /* PersonObject.h */,
+				5DEAE8371AF219AD00D55CE1 /* PersonObject.m */,
+				5DEAE8351AF218F300D55CE1 /* PersonObject+Friendlist.h */,
+				5DEAE83A1AF219F400D55CE1 /* PersonObject+Work.h */,
+				5DEAE83D1AF21A2C00D55CE1 /* PersonObject+Life.h */,
+			);
+			path = PersonObject;
+			sourceTree = "<group>";
+		};
 		5DFF12391AF07466008042CF = {
 			isa = PBXGroup;
 			children = (
@@ -81,14 +106,15 @@
 		5DFF12441AF07466008042CF /* DeepIntoCategory */ = {
 			isa = PBXGroup;
 			children = (
+				5DEAE8301AF216C900D55CE1 /* PersonObject */,
 				5DFF12491AF07466008042CF /* AppDelegate.h */,
 				5DFF124A1AF07466008042CF /* AppDelegate.m */,
 				5DFF124C1AF07466008042CF /* ViewController.h */,
 				5DFF124D1AF07466008042CF /* ViewController.m */,
-				5DFF124F1AF07466008042CF /* Main.storyboard */,
-				5DFF12521AF07466008042CF /* Images.xcassets */,
-				5DFF12541AF07466008042CF /* LaunchScreen.xib */,
 				5DFF12451AF07466008042CF /* Supporting Files */,
+				5DDB13561AF076E60097A8E8 /* NSString+Category.h */,
+				5DDB13571AF076E60097A8E8 /* NSString+Category.m */,
+				5DDB135B1AF07E6C0097A8E8 /* Associate object.md */,
 			);
 			path = DeepIntoCategory;
 			sourceTree = "<group>";
@@ -96,6 +122,9 @@
 		5DFF12451AF07466008042CF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5DFF124F1AF07466008042CF /* Main.storyboard */,
+				5DFF12521AF07466008042CF /* Images.xcassets */,
+				5DFF12541AF07466008042CF /* LaunchScreen.xib */,
 				5DFF12461AF07466008042CF /* Info.plist */,
 				5DFF12471AF07466008042CF /* main.m */,
 			);
@@ -220,8 +249,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DFF124E1AF07466008042CF /* ViewController.m in Sources */,
+				5DEAE83B1AF219F400D55CE1 /* PersonObject+Work.h in Sources */,
 				5DFF124B1AF07466008042CF /* AppDelegate.m in Sources */,
 				5DFF12481AF07466008042CF /* main.m in Sources */,
+				5DEAE8381AF219AD00D55CE1 /* PersonObject.m in Sources */,
+				5DDB13581AF076E60097A8E8 /* NSString+Category.m in Sources */,
+				5DEAE8361AF218F300D55CE1 /* PersonObject+Friendlist.h in Sources */,
+				5DEAE83E1AF21A2C00D55CE1 /* PersonObject+Life.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,9 +381,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: kuo zheng  (7B677HTGG5)";
 				INFOPLIST_FILE = DeepIntoCategory/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2caa4066-8c0a-4ff9-a668-9514320c7739";
 			};
 			name = Debug;
 		};
@@ -357,9 +393,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: kuo zheng  (7B677HTGG5)";
 				INFOPLIST_FILE = DeepIntoCategory/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2caa4066-8c0a-4ff9-a668-9514320c7739";
 			};
 			name = Release;
 		};
@@ -416,6 +454,7 @@
 				5DFF12671AF07466008042CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5DFF12681AF07466008042CF /* Build configuration list for PBXNativeTarget "DeepIntoCategoryTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +463,7 @@
 				5DFF126A1AF07466008042CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

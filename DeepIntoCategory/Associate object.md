@@ -1,3 +1,18 @@
+关联实现原理：
+①有一个单例的AssociationsHashMap实例
+该实例的生成方式如下：
+AssociationsHashMap &associations() 
+{  
+    if (_map == NULL)  
+        _map = new(::_malloc_internal(sizeof(AssociationsHashMap))) AssociationsHashMap();  
+    return *_map;  
+}  
+②AssociationsHashMap实例用于保存一个个的ObjectAssociationMap对象
+③每个类都拥有一个ObjectAssociationMap实例，每个类通过联合存储模式保存的键值对也都保存在ObjectAssociationMap实例中。
+④Key对应的值无所谓，我们需要的是key的地址，因此定义key时通常的写法是：
+static char colorKey;  
+也就是说，说有的数据其实还是保存在AssociationsHashMap实例中
+
 Associated Objects（关联对象）或者叫作关联引用（Associative References）
 是作为Objective-C 2.0 运行时功能被引入到 Mac OS X 10.6 Snow Leopard（及iOS4）系统。
 与它相关在<objc/runtime.h>中有3个C函数，它们可以让对象在运行时关联任何值：
@@ -6,12 +21,15 @@ objc_setAssociatedObject
 objc_getAssociatedObject
 objc_removeAssociatedObjects
 
-为什么这几个方法很有用呢？因为开发者可以通过它们在分类中给已存在的类中添加自定义属性。
+开发者可以通过它们在分类中给已存在的类中添加自定义属性。使用关联，我们可以不用修改类的定义而为其对象增加存储空间。
 
 设置/获取关联对象
     如nsstring+category文件
 
-移除关联对象
+断开关联
+    断开关联时使用objc_setAssociatedObject函数，传入nil值即可。
+
+移除所有关联对象
     一个的方法是试图在某个时刻调用objc_removeAssociatedObjects()函数来移除关联对象，然而，根据苹果文档描述，你不大可能有需求要自己去调用：
     这个函数的主要目的是很容易的让对象恢复成它“原始状态”，你不应该使用它来移除关联的对象，因为它也会移除掉包括其他地方加入的全部的关联对象。
     所以一般你只需要通过调用objc_setAssociatedObject并传入nil值来清除关联值。
@@ -42,6 +60,6 @@ objc_removeAssociatedObjects
 Target-Action     给响应者添加交互事件。
 手势识别           当target-action模式不够用的时候。
 代理              当事件可以委托给其他对象。
-消息 & 消息中心     使用低耦合的方式来广播消息。
+消息&消息中心       使用低耦合的方式来广播消息。
 
 关联对象应该被当做最后的手段来使用（不得不用时才用），而不是为了寻求一个解决方案就行（事实上，分类本身就不应该是解决问题优先选择的工具）。
